@@ -40,7 +40,7 @@ android {
                     this@run.forEach { (key, value) ->
                         add("-D$key=$value")
                     }
-                }.joinToString(":")
+                }.joinToString(" ")
             }
 
             //最小支持的MC版本
