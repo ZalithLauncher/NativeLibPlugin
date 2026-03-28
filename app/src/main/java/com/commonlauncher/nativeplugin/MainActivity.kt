@@ -1,4 +1,4 @@
-package com.mio.plugin.renderer
+package com.commonlauncher.nativeplugin
 
 import android.app.Activity
 import android.os.Bundle
@@ -8,7 +8,7 @@ class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(TextView(this).apply {
-            text = "Plugin"
+            text = getString(R.string.app_name)
         })
     }
 }
