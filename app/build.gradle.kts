@@ -35,7 +35,7 @@ android {
             //JVM environment parameter configuration
             manifestPlaceholders["environment"] = mutableMapOf<String,String>().apply {
                 put("imgui.library.path", "{nativeLibraryDir}")
-                put("imgui.library.name", "imgui-java")
+                put("imgui.library.name", "libimgui-java.so")
             }.run {
                 buildList {
                     this@run.forEach { (key, value) ->
