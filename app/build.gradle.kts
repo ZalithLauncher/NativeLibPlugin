@@ -36,12 +36,11 @@ android {
             manifestPlaceholders["environment"] = mutableMapOf<String,String>().apply {
 //                put("example.plugin", "example")
             }.run {
-                buildString {
+                buildList {
                     this@run.forEach { (key, value) ->
-                        append("-D$key=$value")
-                        append(":")
+                        add("-D$key=$value")
                     }
-                }
+                }.joinToString(":")
             }
 
             //最小支持的MC版本
