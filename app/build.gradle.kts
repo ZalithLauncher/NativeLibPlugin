@@ -7,6 +7,15 @@ android {
     namespace = "com.commonlauncher.nativeplugin"
     compileSdk = 34
 
+    signingConfigs {
+        create("releaseBuild") {
+            storeFile = file("common_plugin.jks")
+            storePassword = "common_plugin"
+            keyAlias = "common_plugin"
+            keyPassword = "common_plugin"
+        }
+    }
+
     defaultConfig {
         applicationId = "com.commonlauncher.nativeplugin"
         minSdk = 26
