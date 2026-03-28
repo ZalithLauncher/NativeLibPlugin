@@ -38,7 +38,7 @@ android {
 
             //插件包在启动器内显示的名称
             //Plugin package display name within the launcher
-            manifestPlaceholders["des"] = "v1.86.12 Patched"
+            manifestPlaceholders["des"] = "imgui-java v1.86.12 Patched"
 
             //JVM环境参数配置
             //JVM environment parameter configuration
