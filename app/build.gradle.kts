@@ -22,19 +22,20 @@ android {
         configureEach {
             //应用名
             //app name
-            resValue("string","app_name","XXX Plugin")
+            resValue("string","app_name","imgui-java Plugin")
             //包名后缀
             //package name Suffix
-            applicationIdSuffix = ".xxx"
+            applicationIdSuffix = ".imgui_java"
 
             //插件包在启动器内显示的名称
             //Plugin package display name within the launcher
-            manifestPlaceholders["des"] = ""
+            manifestPlaceholders["des"] = "v1.86.12 Patched"
 
             //JVM环境参数配置
             //JVM environment parameter configuration
             manifestPlaceholders["environment"] = mutableMapOf<String,String>().apply {
-//                put("example.plugin", "example")
+                put("imgui.library.path", "{nativeLibraryDir}")
+                put("imgui.library.name", "imgui-java")
             }.run {
                 buildList {
                     this@run.forEach { (key, value) ->
@@ -42,13 +43,6 @@ android {
                     }
                 }.joinToString(" ")
             }
-
-            //最小支持的MC版本
-            //The minimum supported MC version
-            manifestPlaceholders["minMCVer"] = ""
-            //最大支持的MC版本
-            //The maximum supported MC version
-            manifestPlaceholders["maxMCVer"] = ""
         }
     }
     compileOptions {
