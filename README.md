@@ -14,9 +14,10 @@
     //配置示例
     put("example.plugin", "example")
     //替换符{nativeLibraryDir}：将替换为该插件的原生库路径
-    put("example.plugin.extra", "{nativeLibraryDir}")
+    //注：{nativeLibraryDir}只能作为开头部分，无需在中间插入"/"，启动器将自动拼接路径
+    put("example.plugin.extra", "{nativeLibraryDir}libexample.so")
     //最终启动器将插入
-    "-Dexample.plugin=example -Dexample.plugin.extra=xxx/xxx/path"
+    "-Dexample.plugin=example -Dexample.plugin.extra=xxx/xxx/libexample.so"
     ```
 - `minMCVer`
   - 最小 MC 支持版本：配置该插件最小支持的 Minecraft 版本，留空或删除这个配置，启动器将视为不限制最小版本
