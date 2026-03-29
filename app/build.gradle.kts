@@ -31,19 +31,19 @@ android {
         configureEach {
             //应用名
             //app name
-            resValue("string","app_name","XXX Plugin")
+            resValue("string","app_name","zstd-dhcompat Plugin")
             //包名后缀
             //package name Suffix
-            applicationIdSuffix = ".xxx"
+            applicationIdSuffix = ".zstd_dhcompat"
 
             //插件包在启动器内显示的名称
             //Plugin package display name within the launcher
-            manifestPlaceholders["des"] = ""
+            manifestPlaceholders["des"] = "zstd-jni 1.5.7-6-dhcompat"
 
             //JVM环境参数配置
             //JVM environment parameter configuration
             manifestPlaceholders["environment"] = mutableMapOf<String,String>().apply {
-//                put("example.plugin", "example")
+                put("ZstdNativePath", "{nativeLibraryDir}libzstd-jni-1.5.7-6-dhcompat.so")
             }.run {
                 buildList {
                     this@run.forEach { (key, value) ->
@@ -51,13 +51,6 @@ android {
                     }
                 }.joinToString(" ")
             }
-
-            //最小支持的MC版本
-            //The minimum supported MC version
-            manifestPlaceholders["minMCVer"] = ""
-            //最大支持的MC版本
-            //The maximum supported MC version
-            manifestPlaceholders["maxMCVer"] = ""
         }
     }
     compileOptions {
