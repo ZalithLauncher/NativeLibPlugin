@@ -14,7 +14,6 @@
     //配置示例
     put("example.plugin", "example")
     //替换符{nativeLibraryDir}：将替换为该插件的原生库路径
-    //注：该值必须为{nativeLibraryDir}，前后不能添加任何字符，否则不会被启动器替换
     put("example.plugin.extra", "{nativeLibraryDir}")
     //最终启动器将插入
     "-Dexample.plugin=example -Dexample.plugin.extra=xxx/xxx/path"
