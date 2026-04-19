@@ -45,7 +45,7 @@ android {
             //JVM环境参数配置
             //JVM environment parameter configuration
             manifestPlaceholders["environment"] = mutableMapOf<String,String>().apply {
-//                put("example.plugin", "example")
+                put("sable_rapier_path", "{nativeLibraryDir}libsable_rapier.so")
             }.run {
                 buildList {
                     this@run.forEach { (key, value) ->
