@@ -16,12 +16,14 @@ android {
         }
     }
 
+    val versionString = "0.1.0 NDK BUILD"
+
     defaultConfig {
         applicationId = "com.commonlauncher.nativeplugin"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        this.versionName = versionString
     }
 
     buildTypes {
@@ -31,14 +33,14 @@ android {
         configureEach {
             //应用名
             //app name
-            resValue("string","app_name","XXX Plugin")
+            resValue("string","app_name","Sable Rapier Plugin")
             //包名后缀
             //package name Suffix
-            applicationIdSuffix = ".xxx"
+            applicationIdSuffix = ".sable_rapier"
 
             //插件包在启动器内显示的名称
             //Plugin package display name within the launcher
-            manifestPlaceholders["des"] = ""
+            manifestPlaceholders["des"] = "sable_rapier $versionString"
 
             //JVM环境参数配置
             //JVM environment parameter configuration
@@ -51,13 +53,6 @@ android {
                     }
                 }.joinToString(" ")
             }
-
-            //最小支持的MC版本
-            //The minimum supported MC version
-            manifestPlaceholders["minMCVer"] = ""
-            //最大支持的MC版本
-            //The maximum supported MC version
-            manifestPlaceholders["maxMCVer"] = ""
         }
     }
     compileOptions {
