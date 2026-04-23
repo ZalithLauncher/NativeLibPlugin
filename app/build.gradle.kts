@@ -16,7 +16,7 @@ android {
         }
     }
 
-    val versionString = "0.1.0 NDK BUILD"
+    val versionString = "0.1.0_9c6b6d1 NDK BUILD"
 
     defaultConfig {
         applicationId = "com.commonlauncher.nativeplugin"
